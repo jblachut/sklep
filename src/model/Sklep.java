@@ -44,7 +44,7 @@ public class Sklep {
 
   //  }
     public String toString() {
-        String rezultat = "id\ttyp\tNazwa\tcena\n";
+        String rezultat = "id\ttyp\tNazwa\tcena\tinne\n";
         for (Produkt produkt : produkty){
             rezultat +=produkt + "\n";
 

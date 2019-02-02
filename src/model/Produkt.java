@@ -5,9 +5,9 @@ import java.math.BigDecimal;
 public abstract class Produkt {  //abstraktcyjna klasa nie pozwala na odwołanie bezpośrednie - trzeba przez klasy córki
     private static int generator =1;
 
-    private int id;
-    private String nazwa;
-    private BigDecimal cena;
+    protected int id;
+    protected String nazwa;
+    protected BigDecimal cena;
 
     public Produkt(String nazwa, BigDecimal cena) {
         this.id=generator++;

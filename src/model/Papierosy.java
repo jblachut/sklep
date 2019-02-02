@@ -17,7 +17,11 @@ public class Papierosy extends Produkt {
     public String getTyp() {
         return "papieros" ;
 
-    }}
+    }
+    public String toString() {//BY PO WYSWIETLENIU TABLIC NIE WYSWIETLAŁO ADRESU TABLICY A DANE
+        return super.toString()+"\t"+this.rodzaj+"\t"+this.ilosc;
+    }
+}
 
 
 
