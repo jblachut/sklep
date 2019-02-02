@@ -22,7 +22,9 @@ public class Alkohol {
     public int getId(){              //możemy odwoływać się do danego pola mimo że jest prywatne
         return id;
     }
-    public int getNazwa(){              //możemy odwoływać się do danego pola mimo że jest prywatne
-        return id;
+    @Override
+    public String toString() { //BY PO WYSWIETLENIU TABLIC NIE WYSWIETLAŁO ADRESU TABLICY A DANE
+        return this.nazwa + " - " + String.valueOf(this.cena) + "PLN";
     }
-}
+    }
+

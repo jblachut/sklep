@@ -15,8 +15,8 @@ public class Sklep {
         this.alkohole= new ArrayList<>();
     }
 
-    public void dodajAlkohol (Alkohol alkohol){
-        alkohole.add(alkohol);
+    public void dodajAlkohol(Alkohol alkohol){
+            alkohole.add(alkohol);
 }
     public void usunAlkohol (int id){
         //for(Alkohol alkohol : alkohole){
@@ -33,6 +33,7 @@ public class Sklep {
         }
     }
     public void wyswietl(){
+
         System.out.println(alkohole);
 
     }
