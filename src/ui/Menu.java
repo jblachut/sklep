@@ -8,6 +8,7 @@ public class Menu {
         System.out.println("2 - usuń alkohol");
         System.out.println("3 - wyświetl stan");
         System.out.println("q - wyjscie");
+
         String wybor;
 do {
     System.out.println("podaj wybór");
