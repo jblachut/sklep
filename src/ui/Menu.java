@@ -47,7 +47,7 @@ do {
 
         case "3":
             System.out.println("Wyświetl stan");
-            sklep.wyswietl();
+            System.out.println(sklep);
             break;
         case "q":
             System.out.println("Wyjscie z programu");

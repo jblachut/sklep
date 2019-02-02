@@ -31,11 +31,21 @@ public class Sklep {
                 iterator.remove();
             }
         }
+
     }
-    public void wyswietl(){
+ //   public void wyswietl() {                    // pierwszy sposób na wyswietlenie danych
 
-        System.out.println(alkohole);
+   //     for (Alkohol alkohol : alkohole){
+    //        System.out.println(alkohol);
+   // }
 
+  //  }
+    public String toString() {
+        String rezultat = "";
+        for (Alkohol alkohol : alkohole){
+            rezultat +=alkohol + "\n";
+    }
+    return  rezultat;
     }
 
 }
