@@ -1,20 +1,24 @@
 package model;
 
+import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 
-public class Sklep {
+public class Sklep implements Serializable {
 
     private  String nazwa;
     private List<Produkt> produkty;
 
-    public Sklep (String nazwa){
+    public Sklep(String nazwa){
         this.nazwa=nazwa;
         this.produkty= new ArrayList<>();
 
     }
+
+
 
     public void dodaj(Produkt produkt){
             produkty.add(produkt);

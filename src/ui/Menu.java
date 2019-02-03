@@ -1,5 +1,6 @@
 package ui;
 
+import io.PlikiBinarne;
 import model.Alkohol;
 import model.Papierosy;
 import model.Sklep;
@@ -7,17 +8,27 @@ import model.Sklep;
 import java.math.BigDecimal;
 import java.util.Scanner;
 
+
 public class Menu {
     public void wyświetl (){
+
+        PlikiBinarne pliki = new PlikiBinarne();
+        Sklep sklep;
+        try {
+            sklep = pliki.odczyt();
+        }catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Nie udało się wczytać sklepu");
+            sklep = new Sklep("Alkohole");
+        }
+
         System.out.println("1 - dodaj alkohol");
         System.out.println("2 - usuń alkohol");
         System.out.println("3 - dodaj papierosy");
         System.out.println("4 - usuń papierosy");
         System.out.println("5 - wyświetl stan");
         System.out.println("q - wyjscie");
-
         String wybor;
-        Sklep sklep= new Sklep("Alkohole xxx");
 do {
     System.out.println("podaj wybór");
     Scanner wejscie = new Scanner(System.in);
@@ -82,10 +93,14 @@ do {
             break;}
 
         case "q":{
+            pliki.zapis(sklep);
             System.out.println("Wyjscie z programu");
+
             break;}
             default:{
-                System.out.println("Błędna opcja, spróbuj jeszcze raz");}
+                System.out.println("Błędna opcja, spróbuj jeszcze raz");
+            }
+
 
     }
 

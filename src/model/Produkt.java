@@ -1,8 +1,9 @@
 package model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public abstract class Produkt {  //abstraktcyjna klasa nie pozwala na odwołanie bezpośrednie - trzeba przez klasy córki
+public abstract class Produkt implements Serializable {  //abstraktcyjna klasa nie pozwala na odwołanie bezpośrednie - trzeba przez klasy córki
     private static int generator =1;
 
     protected int id;
